@@ -1,0 +1,34 @@
+$dot-size = 12px;
+.scroll-buttons
+  height  200px;
+  display flex
+  flex-direction column
+  position fixed
+  right 2*$dot-size;
+  top 50%;
+  transform translateY(-50%);
+  a
+    display block
+    margin-bottom 10px;
+    &:after {
+      content: ' '
+      display block
+      height  $dot-size;
+      width $dot-size;
+      border-radius $dot-size;
+      background-color black; 
+    }
+    &.active
+      &:after {
+        background-color white;
+        border: solid 1px black; 
+      }
+  +for_breakpoint(xs)
+    display: none;
+
+.is-dark
+  .scroll-buttons
+    a
+      &:after {
+        border: solid 1px white; 
+      }
