@@ -25,7 +25,6 @@ export default defineComponent({
     //lifecycles
     onMounted(async () => {
       window.addEventListener('keyup', keyboardShortcuts);
-      // await userStore.get(authStore.userId.value);
     })
     onUnmounted(() => {
       window.removeEventListener('keyup', keyboardShortcuts);
@@ -60,8 +59,6 @@ export default defineComponent({
 </script>
 
 <style lang="stylus">
-// @import '/assets/tailwind/main.css';
-
 @import "/assets/main.styl"; 
 
 html 

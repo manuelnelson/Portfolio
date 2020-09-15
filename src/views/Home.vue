@@ -1,7 +1,7 @@
 <template>
   <div class="home" :class="{'loaded': loaded, 'compressed': compressed}">
     <div class="left-panel" >
-      <h1 class="name"><span class="first-name">E</span> <span class="last-name">N</span> </h1>
+      <h1 class="name"><span class="first-name">E</span><span class="last-name">N</span></h1>
       <img class="home-image" alt="Main Image" src="/src/assets/images/black-and-white.jpg" />
       <ul class="social-links">
         <li><a class="social-links_link" target="_blank" href="https://github.com/manuelnelson/">Github</a></li>

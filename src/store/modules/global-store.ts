@@ -3,7 +3,7 @@ import { IStore } from '..';
 import { modalStore } from './modal-store';
 import { Slide } from '../types/slide';
 
-const filePath = import.meta.env.MODE == 'development' ? '/src/assets/images' : '/images'
+const filePath = '/images'
 
 class GlobalStore implements IStore{
   state = reactive({
