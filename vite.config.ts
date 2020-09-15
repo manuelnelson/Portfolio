@@ -5,11 +5,11 @@
 //   base: isCordova ? '' : '/',
 //   minify: true
 // }
-const isCordova = true;
+const isCordova = false;
 module.exports = {
   outDir: isCordova ? 'src-cordova/www/' : 'dist',
   assetsDir: isCordova ? 'assets' : '_assets',
   base: isCordova ? '' : '/',
-  port: 3010, ///each application we run should use a diff port for auth reasons
+  // port: 3010, ///each application we run should use a diff port for auth reasons
   minify: true
 }
