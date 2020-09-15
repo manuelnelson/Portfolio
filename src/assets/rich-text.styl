@@ -1,0 +1,38 @@
+.rich-text 
+  font-size: px-to-rem(24px);
+  font-family: $font-serif
+  text-align: justify;  
+  font-weight: 300;
+  p + p
+      margin-top px-to-rem(16px)
+  a 
+    display inline-block !important;
+    &:after 
+      content: ' ';
+      display block;
+      height 2px;
+      border-radius 2px
+      background-color var(--primary)
+      max-width 0;
+      width 100%;
+      transition max-width 0.2s ease-in-out;
+      position: relative;
+      bottom 3px;
+    &:hover 
+      text-decoration: none !important;
+      &:after 
+        max-width 100%;
+  &.left-align 
+    margin 0;
+    max-width 60ch;
+  ul 
+    display: block;
+    list-style-type: disc !important;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;  
+    li 
+      list-style-type: disc !important;
+    
+  +for_breakpoint(sm xs) 
+    font-size: px-to-rem(25px);

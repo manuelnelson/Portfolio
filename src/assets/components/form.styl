@@ -1,0 +1,27 @@
+$text-color=var(--text-color)
+$text-color-highlight=var(--text-color-highlight)
+$icon-color=var(--primary)
+$select-background-color=var(--progress-backround)
+$select-background-color-highlight=var(--text-color-highlight)
+.form-container 
+  font-size px-to-rem(18px)
+  form
+    display flex
+    flex-wrap wrap
+  .h1 
+    font-size px-to-rem(24px)
+    margin-bottom 30px;
+  .mui-checkbox 
+    width 50%
+    display inline-block 
+    .material-icons.help
+      transform: translateY(0)
+  h3
+    margin-top px-to-rem(20px)
+  .button-container 
+    display flex
+    justify-content: flex-end
+
+input:not([type]):focus:not([readonly]), input[type="text"]:not(.browser-default):focus:not([readonly]), input[type="password"]:not(.browser-default):focus:not([readonly]), input[type="email"]:not(.browser-default):focus:not([readonly]), input[type="url"]:not(.browser-default):focus:not([readonly]), input[type="time"]:not(.browser-default):focus:not([readonly]), input[type="date"]:not(.browser-default):focus:not([readonly]), input[type="datetime"]:not(.browser-default):focus:not([readonly]), input[type="datetime-local"]:not(.browser-default):focus:not([readonly]), input[type="tel"]:not(.browser-default):focus:not([readonly]), input[type="number"]:not(.browser-default):focus:not([readonly]), input[type="search"]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) 
+  border-bottom: 1px solid var(--primary);
+  box-shadow: 0 1px 0 0 var(--primary);

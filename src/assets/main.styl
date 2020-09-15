@@ -1,0 +1,115 @@
+$color-pack = false
+@import './colors'
+// @import './materialize/index'  
+
+@import './stylus-reset'
+@import './variables'
+// @import './fonts'
+@import './breakpoints'
+@import './functions'
+@import './accessibility'
+// @import './layout'
+// @import './rich-text'
+// @import './autocomplete'
+@import './mixins' 
+@import './button' 
+@import './transitions' 
+@import './logo'
+@import './slide'
+
+
+  
+//components
+// @import './components/form'
+// @import './components/filters'
+// @import './components/tabs-container'
+// @import './components/input' 
+// @import './components/range'
+// @import './components/select' 
+
+$section-spacing = px-to-rem(80px)
+
+html 
+  font-size: 16px;
+  +for_breakpoint(md) 
+    font-size: 14px;
+  +for_breakpoint(sm) 
+    font-size: 13px;
+  +for_breakpoint(xs) 
+    font-size: 12px;
+
+address 
+  font-style: normal;
+
+.mui-errors 
+  color: $error;
+  margin-top 6px;
+  span 
+    display: block;
+    font-size px-to-rem(14px);
+
+.mui-checkbox
+  margin-bottom px-to-rem(42px);
+
+nav 
+  line-height 1
+  ul  
+    float none;
+    a 
+      font-size 2rem
+    .router-link-exact-active 
+      font-weight: bold;
+
+ul.no-style 
+  list-style: none;
+  margin:  0
+  padding: 0;
+
+
+h1,h2,h3,h4,h5,h6, .h1,.h2,.h3,.h4,.h5 
+  font-family $font-headings
+
+h1, .h1 
+  margin 0
+  font-size px-to-rem(36px)
+
+h2, .h2 
+  font-size px-to-rem(32px)
+
+h3, .h3 
+  font-size px-to-rem(24px)
+
+h4, .h4 
+  font-size px-to-rem(18px)
+
+
+a 
+  text-decoration: none;
+  &:focus 
+    text-decoration: none !important; 
+a 
+  &:hover 
+    text-decoration: none !important;
+a.animate 
+  &:after 
+    content: ' ';
+    display block;
+    height 4px;
+    border-radius 4px
+    background-color var(--quartiery)//white;
+    max-width 0;
+    width 100%;
+    transition max-width 0.2s ease-in-out;
+    position: relative;
+    bottom 3px;
+  &:hover 
+    text-decoration: none !important;
+    &:after 
+      max-width 100%;
+a.btn, a.no-hover  
+  &:after 
+    display none;
+  &:hover 
+    &:after 
+      display none;
+

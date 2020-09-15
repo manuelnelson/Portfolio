@@ -1,0 +1,48 @@
+  //select
+  .input-field.select
+    margin-top px-to-rem(30px)
+    margin-bottom px-to-rem(30px)
+    position: relative;
+    overflow:  visible;
+    +.input-field.select
+      margin-top: 0
+
+    .select-dropdown.dropdown-trigger
+      color $text-color
+      padding 6px 0
+      border-bottom: 1px solid #9e9e9e
+    select.browser-default
+      opacity: 0
+      position: absolute
+      top 0
+      left 0
+      width 100%;
+      height 100%
+      -webkit-appearance: menulist-button
+      z-index: 100
+      cursor: pointer;
+      background-color: $select-background-color !important;
+    label 
+      color $text-color 
+      transform: translateY(-24px) scale(0.7)
+      font-weight: bold
+    .select__item
+      background-color $select-background-color
+      color $text-color;
+      padding: 0px 8px;
+      margin-right: 4px;
+      display: inline-flex;
+      align-items: center;
+      position relative;
+      z-index 101
+      i.material-icons
+        color $text-color !important;
+          // color $select-color !important
+    .mui-select__menu
+      max-height 0 !important; 
+      transition max-height 0.15s ease-in-out;
+      padding 0 !important;
+      div.mui--is-selected
+        background-color white !important;
+      &:hover
+        background-color var(--secondary-lighter) !important;

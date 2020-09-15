@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    // this aligns with Vue's browser support
+    "target":"es6",
+    // this enables stricter inference for data properties on `this`
+    "strict": true,
+    "types": ["jest", "midi"],
+    // if using webpack 2+ or rollup, to leverage tree shaking:
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+  },
+  // "files": [
+  //   // "./src/midi-file.d.ts"
+  // ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+  ],
+  "exclude": ["node_modules"]
+}

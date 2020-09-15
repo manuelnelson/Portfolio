@@ -1,0 +1,84 @@
+.tabs-container
+  max-width 1200px;
+  margin 0 0 0 px-to-rem(160px)            
+  padding 0 px-to-rem(20px)
+
+  +for_breakpoint(mid) 
+    margin 0 auto                  
+    padding-bottom 40px
+
+  +for_breakpoint(sm xs) 
+    margin 0 auto                  
+    padding-bottom 0
+
+.tabs 
+  .tab
+    flex-grow: inherit !important 
+    a.active, span.active 
+      background-color: rgba(246, 178, 181, 0.2)
+    
+  
+  &.side-tabs 
+    position fixed;
+    padding-top px-to-rem(30px)
+    left 0;    
+    display flex;
+    flex-flow column
+    width 140px;
+    height calc(100vh - 62px);
+    bottom 0;
+    background-color var(--primary) !important
+    > .tab 
+      height 60px;
+      padding-top 0;
+      padding-bottom 0;
+    
+    .tab li 
+      padding 8px
+      line-height px-to-rem(34px);
+      cursor pointer;
+  
+  &.filled-in 
+    background-color var(--secondary-dark)
+  
+  .indicator 
+    background-color $white;
+    height 3px 
+  
+  i 
+    color white;
+    display block;
+  > .tab 
+    &:hover 
+      background-color var(--primary-light)
+      a 
+        color white;
+    &:after 
+      display none;
+  > .tab a, .tab span 
+    color white;
+    height: 60px;
+    line-height: 24px;
+    font-size px-to-rem(14px)
+    padding-top 8px;
+    position relative
+    overflow: visible
+    display block
+    cursor: pointer;
+    &.active 
+      color white;
+
++for_breakpoint(xs sm mid) {
+  .tabs {
+    .tab {
+      flex-grow 1 !important;
+    }
+    &.side-tabs {
+      flex-flow row;
+      width 100%;
+      height $tabs-height;
+      padding-top: 0;
+      z-index: 1000;
+    }
+  }
+}

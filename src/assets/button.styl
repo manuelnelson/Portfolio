@@ -1,0 +1,69 @@
+//mui sitewide overrides
+.btn 
+  color var(--button-color);
+  background-color var(--primary)
+  font-weight: bold
+  &-primary 
+    background-color: darken($secondary, 10%)
+    color: white !important
+    font-weight: bold
+    text-decoration: none;
+    letter-spacing: -1px;
+    padding: 10px 20px
+    transition background-color 0.2s ease-in-out
+    &:hover
+      background-color: lighten($secondary,10%)
+  &-secondary
+    background-color: transparent !important;
+    border solid 1px var(--secondary)
+    color var(--secondary)
+    &.cancel
+      border solid 2px $error
+      i
+        color $error
+      &:hover
+        border solid 2px $error
+        i
+          color white
+  .no-style
+    background-color transparent 
+    border none 
+    outline none;
+  i 
+    position relative
+    font-size 18px;
+    left -4px
+  &-xlarge
+    width px-to-rem(100px) !important
+    height px-to-rem(100px) !important
+    i
+      font-size px-to-rem(64px) !important
+  &.no-text 
+    display inline-flex;
+    justify-content: center;
+    align-items: center;
+    i 
+      font-size: px-to-rem(28px)
+      top 0;
+      margin 0;
+      left 0;
+  &.round 
+    border-radius 50%
+  &:hover 
+    color white;
+    background-color var(--primary-dark)
+  +.btn    
+    margin-left 8px; 
+.link-btn 
+  color var(--secondary);
+  background-color transparent;
+  padding 0;
+  outline none;
+  border none;
+
+.btn, .btn-floating
+  &.green  
+    background-color $accent-text
+  &.cancel
+    background-color: $error
+    color white;
