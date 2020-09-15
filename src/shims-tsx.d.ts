@@ -16,7 +16,8 @@ declare global {
     env: {
       VITE_API_URL: string,
       VUE_APP_AWS_BUCKET_NAME: string,
-      VITE_CORDOVA: boolean
+      VITE_CORDOVA: boolean,
+      MODE: string
     }
   }
   var mui :any 

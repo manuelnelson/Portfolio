@@ -3,6 +3,8 @@ import { IStore } from '..';
 import { modalStore } from './modal-store';
 import { Slide } from '../types/slide';
 
+const filePath = import.meta.env.MODE == 'development' ? '/src/assets/images' : '/images'
+
 class GlobalStore implements IStore{
   state = reactive({
     disableShortcuts: false,
@@ -13,8 +15,8 @@ class GlobalStore implements IStore{
       id: "youth-indicators",
       title: "U.N. Youth Indicators Application",
       subTitle: "Made in accordance with United Nations OSGEY",
-      imageOne: '/src/assets/images/youth-indicators.png',
-      imageTwo: '/src/assets/images/youth-indicators-2.png',
+      imageOne: `${filePath}/youth-indicators.png`,
+      imageTwo: `${filePath}/youth-indicators-2.png`,
       role: "Architect, Designer, Developer",
       link: "https://youthindicators.herokuapp.com",
       tools: ["Vuejs/Nuxtjs", "UN Stats API", "MongoDB backend"],
@@ -23,8 +25,8 @@ class GlobalStore implements IStore{
       id: "united-nations",
       title: "UN Foundation - APIHighways",
       subTitle: "Made in accordance with Global Partnership for Sustainable Development Data",
-      imageOne: '/src/assets/images/api-highways.png',
-      imageTwo: '/src/assets/images/api-highways-2.png',
+      imageOne: `${filePath}/api-highways.png`,
+      imageTwo: `${filePath}/api-highways-2.png`,
       role: "Developer",
       link: "https://apihighways.org",
       tools: ["Vuejs", "Microservice Architecture","Kubernetes", "MongoDB backend"],
@@ -34,8 +36,8 @@ class GlobalStore implements IStore{
       id: "one-north",
       title: "One North Interactive Websites",
       subTitle: "Made for One North",
-      imageOne: '/src/assets/images/burnsmcd.png',
-      imageTwo: '/src/assets/images/onenorth.png',
+      imageOne: `${filePath}/burnsmcd.png`,
+      imageTwo: `${filePath}/onenorth.png`,
       links: [{url:"https://onenorth.com", text:"One North"},{url:"https://burnsmcd.com", text:"Burns McDonell"},{url:"https://taftlaw.com", text:"Taft Law"},{url:"https://plantemoran.com", text:"Plante Moran Website"}, {url:"https://torys.com", text:"Torys Website"}],
       role: "Senior Developer",
       tools: ["Vuejs/Angular", "Sitecore", "KeystoneJs", ".NET", "Azure"],
