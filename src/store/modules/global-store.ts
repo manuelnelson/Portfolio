@@ -11,7 +11,30 @@ class GlobalStore implements IStore{
     shouldUseLocalStorage: false,
     menuIsOpen: false,
     isLoading: false,
-    slides: [{
+    slides: [
+    {
+        id: "small-beans",
+        title: "Small Beans",
+        subTitle: "Personal Productivity Tracker",
+        imageOne: `${filePath}/small-beans.png`,
+        imageTwo: `${filePath}/small-beans-2.png`,
+        role: "Developer",
+        link: "https://smallbeans.app",
+        tools: ["Vue 3", "Postgres","Redis", "Nestjs", "Typescript"],
+        description: "Personal Project to help me stay focused and track my productivity.  Also first project to use Vue 3."
+    },
+    {
+      id: "piano-pal",
+      title: "Piano Pal",
+      subTitle: "Piano Learning Tool",
+      imageOne: `${filePath}/pianopal.png`,
+      imageTwo: `${filePath}/pianopal-2.png`,
+      role: "Developer",
+      link: "https://pianopal.app",
+      tools: ["Vue 3", "Postgres","Redis", "Nestjs", "Typescript"],
+      description: "Piano learning tool based on gamifying learning similar to Rock Band. Hook up Midi Keyboard to your phone or tablet to play along!"
+  },
+  {
       id: "youth-indicators",
       title: "U.N. Youth Indicators Application",
       subTitle: "Made in accordance with United Nations OSGEY",
@@ -21,16 +44,6 @@ class GlobalStore implements IStore{
       link: "https://youthindicators.herokuapp.com",
       tools: ["Vuejs/Nuxtjs", "UN Stats API", "MongoDB backend"],
       description: "Entire project designed and developed by myself with guidance from UN OSGEY"
-    }, {
-      id: "united-nations",
-      title: "UN Foundation - APIHighways",
-      subTitle: "Made in accordance with Global Partnership for Sustainable Development Data",
-      imageOne: `${filePath}/api-highways.png`,
-      imageTwo: `${filePath}/api-highways-2.png`,
-      role: "Developer",
-      link: "https://apihighways.org",
-      tools: ["Vuejs", "Microservice Architecture","Kubernetes", "MongoDB backend"],
-      description: "Project originally started by Vizzuality, I took over as a solo developer to add new features and fix bugs"
     },
     {
       id: "one-north",

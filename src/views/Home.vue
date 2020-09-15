@@ -78,12 +78,12 @@ export default defineComponent({
           collapse: true
         },
         {
-          id: "youth-indicators",
+          id: "small-beans",
           active: false,
           collapse: false
         },
         {
-          id: "united-nations",
+          id: "youth-indicators",
           active: false,
           collapse: false
         },
