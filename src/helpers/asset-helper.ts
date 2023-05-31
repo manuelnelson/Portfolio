@@ -9,5 +9,5 @@ export const getPublicPath = (relPath:string) => {
   if(import.meta.env.VITE_CORDOVA === "true") {
     return `${relPath}`
   }
-  return import.meta.env.MODE === "development" ? `${relPath}` : `/${relPath}` 
+  return import.meta.env.MODE === "development" ? `${relPath}` : `${relPath}` 
 }
