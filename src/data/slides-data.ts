@@ -1,4 +1,4 @@
-import { getAssetPath } from "../helpers/asset-helper";
+import { getAssetPath, getPublicPath } from "../helpers/asset-helper";
 import {Slide} from '../models/slide'
 import { ref } from 'vue';
 
@@ -6,8 +6,8 @@ export const slides = ref([{
     id: "piano-pal",
     title: "Piano Pal",
     subTitle: "Piano Learning Tool",
-    imageOne: getAssetPath('../assets/images/pianopal.png'),
-    imageTwo: getAssetPath('../assets/images/pianopal-2.png'),
+    imageOne: getPublicPath('/images/pianopal.png'),
+    imageTwo: getPublicPath('/images/pianopal-2.png'),
     role: "Architect, Designer, Developer",
     link: "https://pianopal.app",
     tools: ["Vue 3", "Postgres","Redis", "Nestjs", "Typescript"],
