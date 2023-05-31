@@ -1,0 +1,15 @@
+media_queries = {
+  xs  : "only screen and (max-width: 767px)",
+  sm  : "only screen and (min-width: 768px) and (max-width: 960px)",
+  md  : "only screen and (min-width: 961px) and (max-width: 1264px)",
+  lg  : "only screen and (min-width: 1265px) and (max-width: 1904px)",
+  xl : "only screen and (min-width: 1905px)"
+}
+
+for_breakpoint(breakpoints)
+  conditions = ()
+  for breakpoint in breakpoints
+    push(conditions, media_queries[breakpoint])
+  conditions = join(", ", conditions)
+  @media conditions
+    {block}

@@ -1,0 +1,49 @@
+@import "stylus-reset";
+@import "variables";
+@import "breakpoints";
+@import "functions";
+
+//global
+@import "buttons"
+
+//components
+@import "slide";
+@import "scroll-buttons";
+@import "logo"
+
+
+
+html 
+  background-color: $lighter-gray;
+  color: $primary-dark;
+  +for_breakpoint(md) {
+    font-size: 15px;
+  }
+  +for_breakpoint(sm) {
+    font-size: 14px;
+  }
+
+#app
+  font-family $font-sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  text-align center
+  &.is-dark
+    background-color $primary-dark;
+    color $lighter-gray;
+    button,a,p, .toggle-dark
+      color $lighter-gray;
+
+.toggle-dark
+  cursor pointer;
+  position fixed;
+  top 0;
+  left calc(50% - 14px);
+  z-index 10
+#nav
+  padding 30px
+  a
+    font-weight bold
+    color #2c3e50
+    &.router-link-exact-active
+      color #42b983

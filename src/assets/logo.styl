@@ -1,0 +1,55 @@
+ .first-name {
+    overflow hidden;
+    position relative
+    display inline-block
+    &:after {
+      transition left 0.3s ease-in-out, max-width 0.3s ease-in-out, opacity 0.5s ease-in-out;
+      content: 'mmanuel ';
+      left 0;
+      opacity 1
+      max-width 300px;
+      display: inline-block;
+      margin-right 8px;
+      position relative
+    }    
+  }
+  .last-name {
+    overflow hidden;
+    position relative    
+    display inline-block
+    &:after {
+      content: 'elson';
+      transition left 0.3s ease-in-out, max-width 0.3s ease-in-out, opacity 0.5s ease-in-out;
+      position relative
+      opacity 1
+      max-width 300px;
+      left 0;
+      display: inline-block;
+    }
+  }
+  h1
+    font-size px-to-rem(36px)
+    width 100%
+    font-weight bold
+    font-family $font-writing
+    letter-spacing 4px;
+    span 
+      display inline-block
+
+.compressed
+  .name
+    .first-name {
+      letter-spacing 0
+      &:after {
+        left -200%;
+        max-width 0;
+        opacity 0
+      }
+    }
+    .last-name {
+      &:after {
+        left -200%;          
+        max-width 0;
+        opacity 0
+      }
+    }

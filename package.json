@@ -1,0 +1,21 @@
+{
+  "name": "manny-portfolio-new",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.1",
+    "vue-scrollto": "^2.20.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "stylus": "^0.59.0",
+    "vite": "^4.3.2"
+  }
+}
